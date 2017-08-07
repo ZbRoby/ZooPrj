@@ -11,6 +11,7 @@ public class Animal {
 		this.age = age;
 		this.heigth = heigth;
 		this.weight = weight;
+		
 	}
 	
 	public Animal(){
