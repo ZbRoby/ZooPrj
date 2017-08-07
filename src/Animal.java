@@ -5,6 +5,7 @@ public class Animal {
 	private double heigth;
 	private double weight;
 	
+	
 	public Animal(String name, int age, double heigth, double weight) {
 		super();
 		this.name = name;
