@@ -1,5 +1,7 @@
 package composite;
 
+import visitor.Visitor;
+
 public class Specimen implements Animal{
 
 	protected String name;
@@ -38,5 +40,13 @@ public class Specimen implements Animal{
 	public String toString(){
 		return getInfo();
 	}
+
+	@Override
+	public void acceptVisitor(Visitor v) {
+		v.visit(this);
+		
+	}
+	
+	
 
 }

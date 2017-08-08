@@ -2,6 +2,8 @@ package composite;
 
 import java.util.ArrayList;
 
+import visitor.Visitor;
+
 public class Class implements Animal {
 	protected ArrayList<Animal> animals;
 	protected String name;
@@ -45,4 +47,15 @@ public class Class implements Animal {
 	public String toString(){
 		return getInfo();
 	}
+
+	@Override
+	public void acceptVisitor(Visitor v) {
+		for(Animal a : animals)
+			a.acceptVisitor(v);
+		
+		v.visit(this);
+		
+	}
+	
+	
 }
