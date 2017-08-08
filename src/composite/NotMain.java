@@ -1,5 +1,6 @@
 package composite;
 
+import iterator.*;
 import singleton.Singleton;
 import visitor.ConcreteVisitor;
 import visitor.ConcreteVisitor2;
@@ -28,6 +29,8 @@ public class NotMain {
 		allLivingThings.add(reptile);
 		allLivingThings.add(shark);
 		System.out.println(allLivingThings.getInfo());
+		//-----------------------------------------------
+		
 		Singleton.getInstace().setSpecime(allLivingThings);
 		
 		//---------------------------------------------
@@ -42,6 +45,10 @@ public class NotMain {
 		ConcreteVisitor2 v2 = new ConcreteVisitor2();
 		v2.save( "test.txt");
 		
+		//-----------------------------------------------
+
+		ZooWorker Horatiu = new ZooWorker((AnimalIterator) mammal,(AnimalIterator) reptile);
+		Horatiu.show();
 	}
 
 }

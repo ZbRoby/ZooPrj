@@ -2,8 +2,10 @@ package composite;
 
 import java.util.ArrayList;
 import visitor.Visitor;
+import java.util.Iterator;
+import iterator.AnimalIterator;
 
-public class SpecimenGroupAL implements Animal {
+public class SpecimenGroupAL implements Animal,AnimalIterator {
 	protected ArrayList<Animal> animals;
 	protected String name;
 	
@@ -42,4 +44,8 @@ public class SpecimenGroupAL implements Animal {
 		v.visit(this);
 	}
 	
+	@Override
+	public Iterator createIterator() {
+		return animals.iterator();
+	}
 }

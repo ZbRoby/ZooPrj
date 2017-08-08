@@ -3,7 +3,10 @@ package composite;
 import java.util.HashMap;
 import visitor.Visitor;
 
-public class SpecimenGroupHT implements Animal {
+import java.util.Iterator;
+import iterator.AnimalIterator;
+
+public class SpecimenGroupHT implements Animal,AnimalIterator {
 	protected HashMap<Integer,Animal> animals;
 	protected String name;
 	protected int index;
@@ -44,6 +47,11 @@ public class SpecimenGroupHT implements Animal {
 			animals.get(i).acceptVisitor(v);
 		
 		v.visit(this);
+	}
+
+	@Override
+	public Iterator createIterator() {
+		return animals.values().iterator();
 	}
 	
 }
