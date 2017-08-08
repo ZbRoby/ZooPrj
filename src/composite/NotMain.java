@@ -1,6 +1,7 @@
 package composite;
 
 import visitor.ConcreteVisitor;
+import visitor.ConcreteVisitor2;
 
 
 public class NotMain {
@@ -35,6 +36,10 @@ public class NotMain {
 		
 		System.out.println("Specimen: "+v.getCoutSpecimen());
 		System.out.println("Groups: "+v.getCoutClass());
+		
+		ConcreteVisitor2 v2 = new ConcreteVisitor2();
+		v2.save(allLivingThings, "test.txt");
+		
 	}
 
 }
