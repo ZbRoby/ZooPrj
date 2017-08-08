@@ -1,29 +1,32 @@
 package composite;
 
-import java.util.ArrayList;
+import java.util.HashMap;
 
 import visitor.Visitor;
 
-public class Class implements Animal {
-	protected ArrayList<Animal> animals;
+public class SpecimenGroupHT implements Animal {
+	protected HashMap<Integer,Animal> animals;
 	protected String name;
+	protected int index;
 	
-	public Class() {
+	public SpecimenGroupHT() {
 		// TODO Auto-generated constructor stub
 	}
 	
-	public Class(String name) {
+	public SpecimenGroupHT(String name) {
 		
 		super();
 		this.name = name;
-		this.animals=new ArrayList<Animal>();
+		this.animals=new HashMap<Integer,Animal>();
+		this.index=0;
 	}
 
 
 
 	@Override
 	public void add(Animal a) {
-		animals.add(a);
+		animals.put(index,a);
+		index++;
 	}
 
 	@Override
@@ -50,8 +53,8 @@ public class Class implements Animal {
 
 	@Override
 	public void acceptVisitor(Visitor v) {
-		for(Animal a : animals)
-			a.acceptVisitor(v);
+		for(int i=0;i<index;i++)
+			animals.get(i).acceptVisitor(v);
 		
 		v.visit(this);
 		

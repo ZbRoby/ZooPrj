@@ -1,6 +1,7 @@
 package visitor;
 
-import composite.Class;
+import composite.SpecimenGroupAL;
+import composite.SpecimenGroupHT;
 import composite.Specimen;
 
 
@@ -11,10 +12,17 @@ public class ConcreteVisitor implements Visitor{
 	private int coutSpecimen = 0;
 	
 	@Override
-	public void visit(Class a) {
+	public void visit(SpecimenGroupAL a) {
 		coutClass++;
 		
 	}
+	
+	@Override
+	public void visit(SpecimenGroupHT a) {
+		coutClass++;
+		
+	}
+	
 	@Override
 	public void visit(Specimen m) {
 		coutSpecimen++;
@@ -26,6 +34,7 @@ public class ConcreteVisitor implements Visitor{
 	public int getCoutSpecimen() {
 		return coutSpecimen;
 	}
+	
 	
 	
 	

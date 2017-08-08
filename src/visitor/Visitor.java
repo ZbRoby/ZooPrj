@@ -1,11 +1,13 @@
 package visitor;
 
 import composite.*;
-import composite.Class;
+import composite.SpecimenGroupAL;
 
 public interface Visitor {
 
-	public void visit(Class a);
+	public void visit(SpecimenGroupAL a);
+	
+	public void visit(SpecimenGroupHT a);
 	
 	public void visit(Specimen s);
 	
