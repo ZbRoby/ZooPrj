@@ -11,6 +11,7 @@ public class Class implements Animal {
 	}
 	
 	public Class(String name) {
+		
 		super();
 		this.name = name;
 		this.animals=new ArrayList<Animal>();

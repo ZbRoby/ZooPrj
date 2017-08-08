@@ -2,6 +2,7 @@ package composite;
 
 public class NotMain {
 	public static void main(String[] args) {
+		
 		Animal animalia,mammal,reptile,shark,dog,cat,snake,lizard;
 		animalia=new Class("Animalia");
 		mammal=new Class("Mammal");

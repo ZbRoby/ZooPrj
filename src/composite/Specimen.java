@@ -6,6 +6,7 @@ public class Specimen implements Animal{
 	protected int age;
 	
 	public Specimen(String name, int age) {
+		
 		super();
 		this.name = name;
 		this.age = age;
