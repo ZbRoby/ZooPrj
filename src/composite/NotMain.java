@@ -1,5 +1,6 @@
 package composite;
 
+import singleton.Singleton;
 import visitor.ConcreteVisitor;
 import visitor.ConcreteVisitor2;
 
@@ -27,6 +28,7 @@ public class NotMain {
 		allLivingThings.add(reptile);
 		allLivingThings.add(shark);
 		System.out.println(allLivingThings.getInfo());
+		Singleton.getInstace().setSpecime(allLivingThings);
 		
 		//---------------------------------------------
 		
@@ -38,7 +40,7 @@ public class NotMain {
 		System.out.println("Groups: "+v.getCoutClass());
 		
 		ConcreteVisitor2 v2 = new ConcreteVisitor2();
-		v2.save(allLivingThings, "test.txt");
+		v2.save( "test.txt");
 		
 	}
 

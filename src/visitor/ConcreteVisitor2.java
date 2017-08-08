@@ -8,6 +8,7 @@ import composite.Animal;
 import composite.Specimen;
 import composite.SpecimenGroupAL;
 import composite.SpecimenGroupHT;
+import singleton.Singleton;
 
 public class ConcreteVisitor2 implements Visitor{
 	
@@ -31,10 +32,11 @@ public class ConcreteVisitor2 implements Visitor{
 		
 	}
 	
-	public void save(Animal a , String filename) {
+	public void save(  String filename) {
 		
 		text = "";
-		a.acceptVisitor(this);
+		Singleton.getInstace().getSpecime().acceptVisitor(this);
+		
 		 try {
 			 
 			PrintWriter writer = new PrintWriter(filename, "UTF-8");
