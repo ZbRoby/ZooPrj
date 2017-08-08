@@ -10,7 +10,6 @@ public class ConcreteVisitor implements Visitor{
 	
 	private int coutSpecimen = 0;
 	
-	
 	@Override
 	public void visit(Class a) {
 		coutClass++;

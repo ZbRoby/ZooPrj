@@ -26,7 +26,6 @@ public class NotMain {
 		animalia.add(shark);
 		System.out.println(animalia.getInfo());
 		
-		
 		//---------------------------------------------
 		
 		ConcreteVisitor v = new ConcreteVisitor();

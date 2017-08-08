@@ -9,5 +9,6 @@ public interface Animal {
 	public int getAge();
 	public String getInfo();
 	
+	
 	public void acceptVisitor(Visitor v);
 }

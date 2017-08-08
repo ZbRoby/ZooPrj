@@ -48,5 +48,4 @@ public class Specimen implements Animal{
 	}
 	
 	
-
 }

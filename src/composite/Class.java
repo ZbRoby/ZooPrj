@@ -57,5 +57,4 @@ public class Class implements Animal {
 		
 	}
 	
-	
 }
