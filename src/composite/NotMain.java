@@ -34,7 +34,7 @@ public class NotMain {
 		allLivingThings.acceptVisitor(v);
 		
 		System.out.println("Specimen: "+v.getCoutSpecimen());
-		System.out.println("Class: "+v.getCoutClass());
+		System.out.println("Groups: "+v.getCoutClass());
 	}
 
 }

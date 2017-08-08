@@ -3,12 +3,10 @@ package composite;
 import visitor.Visitor;
 
 public class Specimen implements Animal{
-
 	protected String name;
 	protected int age;
 	
 	public Specimen(String name, int age) {
-		
 		super();
 		this.name = name;
 		this.age = age;
@@ -25,7 +23,6 @@ public class Specimen implements Animal{
 		return name;
 	}
 
-	@Override
 	public int getAge() {
 		// TODO Auto-generated method stub
 		return age;
@@ -44,8 +41,6 @@ public class Specimen implements Animal{
 	@Override
 	public void acceptVisitor(Visitor v) {
 		v.visit(this);
-		
 	}
-	
 	
 }

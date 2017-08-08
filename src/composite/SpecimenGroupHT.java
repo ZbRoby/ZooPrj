@@ -1,17 +1,12 @@
 package composite;
 
 import java.util.HashMap;
-
 import visitor.Visitor;
 
 public class SpecimenGroupHT implements Animal {
 	protected HashMap<Integer,Animal> animals;
 	protected String name;
 	protected int index;
-	
-	public SpecimenGroupHT() {
-		// TODO Auto-generated constructor stub
-	}
 	
 	public SpecimenGroupHT(String name) {
 		
@@ -20,8 +15,6 @@ public class SpecimenGroupHT implements Animal {
 		this.animals=new HashMap<Integer,Animal>();
 		this.index=0;
 	}
-
-
 
 	@Override
 	public void add(Animal a) {
@@ -33,12 +26,6 @@ public class SpecimenGroupHT implements Animal {
 	public String getName() {
 		// TODO Auto-generated method stub
 		return name;
-	}
-
-	@Override
-	public int getAge() {
-		// TODO Auto-generated method stub
-		return -1;
 	}
 
 	@Override
@@ -57,7 +44,6 @@ public class SpecimenGroupHT implements Animal {
 			animals.get(i).acceptVisitor(v);
 		
 		v.visit(this);
-		
 	}
 	
 }

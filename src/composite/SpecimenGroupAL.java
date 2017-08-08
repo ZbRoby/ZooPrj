@@ -1,24 +1,17 @@
 package composite;
 
 import java.util.ArrayList;
-
 import visitor.Visitor;
 
 public class SpecimenGroupAL implements Animal {
 	protected ArrayList<Animal> animals;
 	protected String name;
 	
-	public SpecimenGroupAL() {
-		// TODO Auto-generated constructor stub
-	}
-	
 	public SpecimenGroupAL(String name) {
-		
 		super();
 		this.name = name;
 		this.animals=new ArrayList<Animal>();
 	}
-
 
 
 	@Override
@@ -30,12 +23,6 @@ public class SpecimenGroupAL implements Animal {
 	public String getName() {
 		// TODO Auto-generated method stub
 		return name;
-	}
-
-	@Override
-	public int getAge() {
-		// TODO Auto-generated method stub
-		return -1;
 	}
 
 	@Override
@@ -52,9 +39,7 @@ public class SpecimenGroupAL implements Animal {
 	public void acceptVisitor(Visitor v) {
 		for(Animal a : animals)
 			a.acceptVisitor(v);
-		
 		v.visit(this);
-		
 	}
 	
 }
