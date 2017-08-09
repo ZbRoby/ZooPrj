@@ -6,6 +6,7 @@ import visitor.ConcreteVisitor;
 public class CommandStats implements Command{
 	
 	private Animal a;
+	private ConcreteVisitor v = new ConcreteVisitor();
 	
 	public CommandStats(Animal a) {
 		this.a = a;
@@ -14,7 +15,7 @@ public class CommandStats implements Command{
 	@Override
 	public void execute() {
 		
-		ConcreteVisitor v = new ConcreteVisitor();
+		
 		
 		a.acceptVisitor(v);
 		

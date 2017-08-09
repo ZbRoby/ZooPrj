@@ -6,6 +6,7 @@ import visitor.ConcreteVisitor2;
 public class CommandSave implements Command{
 
 	private Animal a;
+	private ConcreteVisitor2 v2 = new ConcreteVisitor2();
 	
 	public CommandSave(Animal a) {
 		this.a = a;
