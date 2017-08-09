@@ -1,11 +1,14 @@
 package composite;
 
 import singleton.Singleton;
-import visitor.ConcreteVisitor;
-import visitor.ConcreteVisitor2;
+
 import iterator.ZooWorker;
 import iterator.AnimalIterator;
-import java.util.Iterator;
+
+
+import command.Command;
+import command.CommandSave;
+import command.CommandStats;
 
 public class NotMain {
 	public static void main(String[] args) {
@@ -34,15 +37,12 @@ public class NotMain {
 		
 		//---------------------------------------------
 		
-		ConcreteVisitor v = new ConcreteVisitor();
+		Command stats = new CommandStats(allLivingThings);
+		stats.execute();
 		
-		allLivingThings.acceptVisitor(v);
+		Command save = new CommandSave(allLivingThings);
+		save.execute();
 		
-		System.out.println("Specimen: "+v.getCoutSpecimen());
-		System.out.println("Groups: "+v.getCoutClass());
-		
-		ConcreteVisitor2 v2 = new ConcreteVisitor2();
-		v2.save( allLivingThings,"test.txt");
 
 		//-----------------------------------------------
 
