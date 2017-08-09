@@ -1,10 +1,11 @@
 package composite;
 
-import iterator.ZooWorker;
+import singleton.Singleton;
 import visitor.ConcreteVisitor;
+import visitor.ConcreteVisitor2;
+import iterator.ZooWorker;
 import iterator.AnimalIterator;
 import java.util.Iterator;
-
 
 public class NotMain {
 	public static void main(String[] args) {
@@ -29,6 +30,7 @@ public class NotMain {
 		allLivingThings.add(reptile);
 		allLivingThings.add(shark);
 		System.out.println(allLivingThings.getInfo());
+		Singleton.getInstace().setSpecime(allLivingThings);
 		
 		//---------------------------------------------
 		
@@ -38,11 +40,14 @@ public class NotMain {
 		
 		System.out.println("Specimen: "+v.getCoutSpecimen());
 		System.out.println("Groups: "+v.getCoutClass());
+		
+		ConcreteVisitor2 v2 = new ConcreteVisitor2();
+		v2.save( allLivingThings,"test.txt");
 
 		//-----------------------------------------------
+
 		ZooWorker Horatiu = new ZooWorker((AnimalIterator) mammal,(AnimalIterator) reptile);
 		Horatiu.show();
 	}
-
 
 }
