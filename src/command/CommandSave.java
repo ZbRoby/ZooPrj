@@ -15,8 +15,7 @@ public class CommandSave implements Command{
 	
 	@Override
 	public void execute() {
-		
-		ConcreteVisitor2 v2 = new ConcreteVisitor2();
+			
 		v2.save( a,"test.txt");
 	}
 
