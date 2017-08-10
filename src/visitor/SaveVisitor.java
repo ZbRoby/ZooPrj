@@ -8,11 +8,16 @@ import composite.Animal;
 import composite.Specimen;
 import composite.SpecimenGroupAL;
 import composite.SpecimenGroupHT;
+import singleton.ZooLog;
 
-public class ConcreteVisitor2 implements Visitor{
+public class SaveVisitor implements Visitor{
 	
 	private String text;
 
+	public SaveVisitor () {
+		ZooLog.logger.trace("Save visitor created...");
+	}
+	
 	@Override
 	public void visit(SpecimenGroupAL a) {
 		text += a.getName() + "\n";
@@ -42,7 +47,7 @@ public class ConcreteVisitor2 implements Visitor{
 			writer.close();
 			
 		} catch (FileNotFoundException e) {
-			// TODO Auto-generated catch block
+			ZooLog.logger.error("File not found.");
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
 			// TODO Auto-generated catch block

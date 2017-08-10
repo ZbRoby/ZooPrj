@@ -1,7 +1,6 @@
 package composite;
 
 import singleton.Singleton;
-
 import iterator.ZooWorker;
 import iterator.AnimalIterator;
 
