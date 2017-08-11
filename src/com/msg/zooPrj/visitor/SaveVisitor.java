@@ -1,51 +1,51 @@
-package visitor;
+package com.msg.zooPrj.visitor;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
 import java.io.UnsupportedEncodingException;
 
-import composite.Animal;
-import composite.Specimen;
-import composite.SpecimenGroupAL;
-import composite.SpecimenGroupHT;
-import singleton.ZooLog;
+import com.msg.zooPrj.composite.Animal;
+import com.msg.zooPrj.composite.Specimen;
+import com.msg.zooPrj.composite.SpecimenGroupAL;
+import com.msg.zooPrj.composite.SpecimenGroupHT;
+import com.msg.zooPrj.singleton.ZooLog;
 
-public class SaveVisitor implements Visitor{
-	
+public class SaveVisitor implements Visitor {
+
 	private String text;
 
-	public SaveVisitor () {
+	public SaveVisitor() {
 		ZooLog.logger.trace("Save visitor created...");
 	}
-	
+
 	@Override
 	public void visit(SpecimenGroupAL a) {
 		text += a.getName() + "\n";
-		
+
 	}
 
 	@Override
 	public void visit(SpecimenGroupHT a) {
 		text += a.getName() + "\n";
-		
+
 	}
 
 	@Override
 	public void visit(Specimen s) {
 		text += s.getName() + "\n";
-		
+
 	}
-	
-	public void save(Animal a , String filename) {
-		
+
+	public void save(Animal a, String filename) {
+
 		text = "";
 		a.acceptVisitor(this);
-		 try {
-			 
+		try {
+
 			PrintWriter writer = new PrintWriter(filename, "UTF-8");
 			writer.print(text);
 			writer.close();
-			
+
 		} catch (FileNotFoundException e) {
 			ZooLog.logger.error("File not found exception.");
 			e.printStackTrace();
@@ -53,8 +53,7 @@ public class SaveVisitor implements Visitor{
 			ZooLog.logger.error("Unsupported encoding exception.");
 			e.printStackTrace();
 		}
-		
-		
+
 	}
 
 }

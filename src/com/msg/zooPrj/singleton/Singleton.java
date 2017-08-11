@@ -1,14 +1,12 @@
-package singleton;
+package com.msg.zooPrj.singleton;
 
-
-import composite.Animal;
-import composite.SpecimenGroupAL;
+import com.msg.zooPrj.composite.Animal;
 
 public class Singleton {
-	
-	private static Singleton instance=new Singleton();
+
+	private static Singleton instance = new Singleton();
 	private Animal specime;
-	
+
 	public Animal getSpecime() {
 		return specime;
 	}
@@ -17,12 +15,11 @@ public class Singleton {
 		this.specime = allLivingThings;
 	}
 
-	private Singleton(){}
-	
+	private Singleton() {
+	}
+
 	public static Singleton getInstace() {
-		
-		
-		
+
 		return instance;
 	}
 

@@ -1,11 +1,13 @@
-package composite;
+package com.msg.zooPrj.composite;
 
-import visitor.Visitor;
+import com.msg.zooPrj.visitor.Visitor;
 
-public class Specimen implements Animal{
+//This is the class for the Composite Design Pattern (Leaf)
+
+public class Specimen implements Animal {
 	protected String name;
 	protected int age;
-	
+
 	public Specimen(String name, int age) {
 		super();
 		this.name = name;
@@ -31,10 +33,10 @@ public class Specimen implements Animal{
 	@Override
 	public String getInfo() {
 		// TODO Auto-generated method stub
-		return name+" has age:"+age;
+		return name + " has age:" + age;
 	}
-	
-	public String toString(){
+
+	public String toString() {
 		return getInfo();
 	}
 
@@ -42,5 +44,5 @@ public class Specimen implements Animal{
 	public void acceptVisitor(Visitor v) {
 		v.visit(this);
 	}
-	
+
 }
