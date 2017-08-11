@@ -47,10 +47,10 @@ public class SaveVisitor implements Visitor{
 			writer.close();
 			
 		} catch (FileNotFoundException e) {
-			ZooLog.logger.error("File not found.");
+			ZooLog.logger.error("File not found exception.");
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
-			// TODO Auto-generated catch block
+			ZooLog.logger.error("Unsupported encoding exception.");
 			e.printStackTrace();
 		}
 		
