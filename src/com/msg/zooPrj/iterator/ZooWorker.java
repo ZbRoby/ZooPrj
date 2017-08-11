@@ -3,6 +3,15 @@ package com.msg.zooPrj.iterator;
 import java.util.Iterator;
 
 import com.msg.zooPrj.composite.Animal;
+import com.msg.zooPrj.singleton.ZooLog;
+
+	/*
+	 * this class uses the iterator design pattern to display
+	 *  the content of an ArrayList and HashMap
+	 * 
+	 * 
+	 * */
+
 
 public class ZooWorker {
 	private AnimalIterator am;
@@ -11,6 +20,7 @@ public class ZooWorker {
 	public ZooWorker(AnimalIterator am, AnimalIterator ar) {
 		this.am = am;
 		this.ar = ar;
+		ZooLog.logger.trace("The zoo worker has been created!");
 	}
 
 	public void show() {
