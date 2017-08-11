@@ -1,9 +1,15 @@
 package com.msg.zooPrj;
 
-import com.msg.zooPrj.command.*;
-import com.msg.zooPrj.composite.*;
-import com.msg.zooPrj.iterator.*;
-import com.msg.zooPrj.singleton.*;
+import com.msg.zooPrj.command.Command;
+import com.msg.zooPrj.command.CommandSave;
+import com.msg.zooPrj.command.CommandStats;
+import com.msg.zooPrj.composite.Animal;
+import com.msg.zooPrj.composite.Specimen;
+import com.msg.zooPrj.composite.SpecimenGroupAL;
+import com.msg.zooPrj.composite.SpecimenGroupHT;
+import com.msg.zooPrj.iterator.AnimalIterator;
+import com.msg.zooPrj.iterator.ZooWorker;
+import com.msg.zooPrj.singleton.SingletonEnum;
 
 public class ZooPrjMain {
 	public static void main(String[] args) {
@@ -28,7 +34,8 @@ public class ZooPrjMain {
 		allLivingThings.add(reptile);
 		allLivingThings.add(shark);
 		System.out.println(allLivingThings.getInfo());
-		Singleton.getInstace().setSpecime(allLivingThings);
+		// Singleton.getInstace().setSpecime(allLivingThings);
+		SingletonEnum.INSTANCE.setSpecime(allLivingThings);
 
 		// ---------------------------------------------
 
@@ -41,7 +48,7 @@ public class ZooPrjMain {
 		// -----------------------------------------------
 
 		ZooWorker Horatiu = new ZooWorker((AnimalIterator) mammal, (AnimalIterator) reptile);
-		Horatiu.show(); 
+		Horatiu.show();
 	}
 
 }
