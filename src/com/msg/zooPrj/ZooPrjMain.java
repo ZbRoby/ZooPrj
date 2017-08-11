@@ -41,7 +41,7 @@ public class ZooPrjMain {
 		// -----------------------------------------------
 
 		ZooWorker Horatiu = new ZooWorker((AnimalIterator) mammal, (AnimalIterator) reptile);
-		Horatiu.show();
+		Horatiu.show(); 
 	}
 
 }
