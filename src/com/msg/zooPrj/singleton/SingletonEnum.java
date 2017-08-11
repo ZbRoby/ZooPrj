@@ -7,9 +7,9 @@ import com.msg.zooPrj.composite.Animal;
 public enum SingletonEnum {
 	INSTANCE;
 
-	private Animal specime;
+	private Animal specimen;
 
-	public void setSpecime(Animal allLivingThings) {
-		this.specime = allLivingThings;
+	public void setSpecime(Animal allAnimals) {
+		this.specimen = allAnimals;
 	}
 }
