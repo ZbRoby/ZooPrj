@@ -5,6 +5,11 @@ import com.msg.zooPrj.composite.SpecimenGroupAL;
 import com.msg.zooPrj.composite.SpecimenGroupHT;
 import com.msg.zooPrj.singleton.ZooLog;
 
+/**
+ * Implementation of visitor interface
+ * Counts the number of each type of object
+ */
+
 public class StatsVisitor implements Visitor {
 
 	private int coutClass = 0;

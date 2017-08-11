@@ -10,6 +10,11 @@ import com.msg.zooPrj.composite.SpecimenGroupAL;
 import com.msg.zooPrj.composite.SpecimenGroupHT;
 import com.msg.zooPrj.singleton.ZooLog;
 
+/**
+ * Implementation of visitor interface
+ * Saves the name attribute of visited classes in a file
+ */
+
 public class SaveVisitor implements Visitor {
 
 	private String text;

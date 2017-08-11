@@ -4,6 +4,11 @@ import com.msg.zooPrj.composite.Animal;
 import com.msg.zooPrj.singleton.ZooLog;
 import com.msg.zooPrj.visitor.StatsVisitor;
 
+/**
+ * Implementation of command interface
+ * Executes statistics visitor 
+ */
+
 public class CommandStats implements Command {
 
 	private Animal a;
@@ -19,9 +24,12 @@ public class CommandStats implements Command {
 	public void execute() {
 
 		a.acceptVisitor(v);
-
-		System.out.println("Specimen: " + v.getCoutSpecimen());
-		System.out.println("Groups: " + v.getCoutClass());
+			
+		ZooLog.logger.trace("\n\t\tCount report:\n"+
+				"-----------------------------------------------------------------\n"
+				+ "|\tSpecimen:\t\t|\t" + v.getCoutSpecimen()+"\t\t\t|\n"
+				+ "|\tGroups:\t\t\t|\t" + v.getCoutClass()+"\t\t\t|\n"+
+				"-----------------------------------------------------------------");
 
 		ZooLog.logger.trace("Stats command executed...");
 	}
