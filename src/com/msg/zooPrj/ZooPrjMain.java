@@ -35,7 +35,7 @@ public class ZooPrjMain {
 		allLivingThings.add(shark);
 		System.out.println(allLivingThings.getInfo());
 		// Singleton.getInstace().setSpecime(allLivingThings);
-		SingletonEnum.INSTACE.setSpecime(allLivingThings);
+		SingletonEnum.INSTANCE.setSpecime(allLivingThings);
 
 		// ---------------------------------------------
 
