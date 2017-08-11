@@ -12,4 +12,8 @@ public enum SingletonEnum {
 	public void setSpecime(Animal allAnimals) {
 		this.specimen = allAnimals;
 	}
+
+	public Animal getSpecime() {
+		return specimen;
+	}
 }
