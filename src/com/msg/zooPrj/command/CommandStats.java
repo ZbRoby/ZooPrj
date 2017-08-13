@@ -25,7 +25,7 @@ public class CommandStats implements Command {
 
 		a.acceptVisitor(v);
 			
-		ZooLog.logger.trace("\n\t\tCount report:\n"+
+		ZooLog.logger.trace("Count report:\n"+
 				"-----------------------------------------------------------------\n"
 				+ "|\tSpecimen:\t\t|\t" + v.getCoutSpecimen()+"\t\t\t|\n"
 				+ "|\tGroups:\t\t\t|\t" + v.getCoutClass()+"\t\t\t|\n"+
