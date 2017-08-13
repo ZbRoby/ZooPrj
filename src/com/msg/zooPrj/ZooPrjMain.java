@@ -2,6 +2,7 @@ package com.msg.zooPrj;
 
 import com.msg.zooPrj.command.Command;
 import com.msg.zooPrj.command.CommandSave;
+import com.msg.zooPrj.command.CommandSaveToXML;
 import com.msg.zooPrj.command.CommandStats;
 import com.msg.zooPrj.composite.Animal;
 import com.msg.zooPrj.composite.Specimen;
@@ -44,6 +45,9 @@ public class ZooPrjMain {
 
 		Command save = new CommandSave(allLivingThings);
 		save.execute();
+		
+		Command saveToXML = new CommandSaveToXML("Zoo.xml");
+		saveToXML.execute();
 
 		// -----------------------------------------------
 

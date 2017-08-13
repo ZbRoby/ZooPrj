@@ -6,6 +6,7 @@ import com.msg.zooPrj.composite.SpecimenGroupHM;
 import com.msg.zooPrj.singleton.ZooLog;
 
 /**
+ * @author marius
  * Implementation of visitor interface
  * Counts the number of each type of object
  */

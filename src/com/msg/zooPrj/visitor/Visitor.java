@@ -3,6 +3,8 @@ package com.msg.zooPrj.visitor;
 import com.msg.zooPrj.composite.*;
 
 /**
+ * 
+ * @author marius
  * Interface for visitor design pattern
  */
 
