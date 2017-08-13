@@ -6,7 +6,7 @@ import com.msg.zooPrj.command.CommandStats;
 import com.msg.zooPrj.composite.Animal;
 import com.msg.zooPrj.composite.Specimen;
 import com.msg.zooPrj.composite.SpecimenGroupAL;
-import com.msg.zooPrj.composite.SpecimenGroupHT;
+import com.msg.zooPrj.composite.SpecimenGroupHM;
 import com.msg.zooPrj.iterator.AnimalIterator;
 import com.msg.zooPrj.iterator.ZooWorker;
 import com.msg.zooPrj.singleton.SingletonEnum;
@@ -18,7 +18,7 @@ public class ZooPrjMain {
 		allLivingThings = new SpecimenGroupAL("Animalia");
 
 		mammal = new SpecimenGroupAL("Mammal");
-		reptile = new SpecimenGroupHT("Reptile");
+		reptile = new SpecimenGroupHM("Reptile");
 
 		shark = new Specimen("Shark", 10);
 		dog = new Specimen("Dog", 9);

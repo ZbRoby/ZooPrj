@@ -2,7 +2,7 @@ package com.msg.zooPrj.visitor;
 
 import com.msg.zooPrj.composite.Specimen;
 import com.msg.zooPrj.composite.SpecimenGroupAL;
-import com.msg.zooPrj.composite.SpecimenGroupHT;
+import com.msg.zooPrj.composite.SpecimenGroupHM;
 import com.msg.zooPrj.singleton.ZooLog;
 
 /**
@@ -27,7 +27,7 @@ public class StatsVisitor implements Visitor {
 	}
 
 	@Override
-	public void visit(SpecimenGroupHT a) {
+	public void visit(SpecimenGroupHM a) {
 		coutClass++;
 
 	}

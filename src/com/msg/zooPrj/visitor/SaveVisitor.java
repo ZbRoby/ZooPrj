@@ -7,7 +7,7 @@ import java.io.UnsupportedEncodingException;
 import com.msg.zooPrj.composite.Animal;
 import com.msg.zooPrj.composite.Specimen;
 import com.msg.zooPrj.composite.SpecimenGroupAL;
-import com.msg.zooPrj.composite.SpecimenGroupHT;
+import com.msg.zooPrj.composite.SpecimenGroupHM;
 import com.msg.zooPrj.singleton.ZooLog;
 
 /**
@@ -30,7 +30,7 @@ public class SaveVisitor implements Visitor {
 	}
 
 	@Override
-	public void visit(SpecimenGroupHT a) {
+	public void visit(SpecimenGroupHM a) {
 		text += a.getName() + "\n";
 
 	}
