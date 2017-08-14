@@ -1,17 +1,18 @@
 package com.msg.zooPrj.singleton;
 
 import org.junit.Test;
+/* testing SingletonEnum */
+import junit.framework.TestCase;
 
-import com.msg.zooPrj.composite.Animal;
-
-public class SingletonEnumTest {
+public class SingletonEnumTest extends TestCase {
 
 	@Test
-	public void testHashcode() {
-		Animal animal1 = null;
-		Animal animal2 = null;
+	public void test() {
 
-		SingletonEnum.INSTANCE.setSpecime(animal1);
+		SingletonEnum e1 = SingletonEnum.INSTANCE;
+		SingletonEnum e2 = SingletonEnum.INSTANCE;
+
+		assertEquals(e1.hashCode(), e2.hashCode());
 
 	}
 
