@@ -4,9 +4,13 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 import com.msg.zooPrj.iterator.AnimalIterator;
+import com.msg.zooPrj.singleton.ZooLog;
 import com.msg.zooPrj.visitor.Visitor;
 
-//This is the interface for the Composite Design Pattern (composite ,group , using )
+/*
+ * This is the class for the Composite Design Pattern (Composite)
+ * The ArrayList Version
+ * */
 
 public class SpecimenGroupAL implements Animal, AnimalIterator {
 	protected ArrayList<Animal> animals;
@@ -16,22 +20,22 @@ public class SpecimenGroupAL implements Animal, AnimalIterator {
 		super();
 		this.name = name;
 		this.animals = new ArrayList<Animal>();
+		ZooLog.logger.trace("SpecimenGroupAL["+name+"] class created...");
 	}
 
 	@Override
 	public void add(Animal a) {
 		animals.add(a);
+		ZooLog.logger.trace("An Element has been added to SpecimenGroupAL["+name+"] ...");
 	}
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		return name;
 	}
 
 	@Override
 	public String getInfo() {
-		// TODO Auto-generated method stub
 		return name + " has " + animals.toString();
 	}
 

@@ -4,6 +4,12 @@ import com.msg.zooPrj.composite.Animal;
 import com.msg.zooPrj.singleton.ZooLog;
 import com.msg.zooPrj.visitor.SaveVisitor;
 
+/**
+ * @author marius
+ * Implementation of command interface
+ * Executes save visitor 
+ */
+
 public class CommandSave implements Command {
 
 	private Animal a;

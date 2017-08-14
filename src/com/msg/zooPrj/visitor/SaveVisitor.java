@@ -7,8 +7,14 @@ import java.io.UnsupportedEncodingException;
 import com.msg.zooPrj.composite.Animal;
 import com.msg.zooPrj.composite.Specimen;
 import com.msg.zooPrj.composite.SpecimenGroupAL;
-import com.msg.zooPrj.composite.SpecimenGroupHT;
+import com.msg.zooPrj.composite.SpecimenGroupHM;
 import com.msg.zooPrj.singleton.ZooLog;
+
+/**
+ * @author marius
+ * Implementation of visitor interface
+ * Saves the name attribute of visited classes in a file
+ */
 
 public class SaveVisitor implements Visitor {
 
@@ -25,7 +31,7 @@ public class SaveVisitor implements Visitor {
 	}
 
 	@Override
-	public void visit(SpecimenGroupHT a) {
+	public void visit(SpecimenGroupHM a) {
 		text += a.getName() + "\n";
 
 	}
@@ -40,6 +46,7 @@ public class SaveVisitor implements Visitor {
 
 		text = "";
 		a.acceptVisitor(this);
+		
 		try {
 
 			PrintWriter writer = new PrintWriter(filename, "UTF-8");
@@ -55,5 +62,7 @@ public class SaveVisitor implements Visitor {
 		}
 
 	}
+	
+	
 
 }

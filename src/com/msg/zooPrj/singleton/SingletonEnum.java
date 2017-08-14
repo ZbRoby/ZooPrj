@@ -16,4 +16,7 @@ public enum SingletonEnum {
 	public Animal getSpecime() {
 		return specimen;
 	}
+	public Animal getSpecime() {
+		return specime;
+	}
 }

@@ -1,9 +1,11 @@
 package com.msg.zooPrj.composite;
 
+import com.msg.zooPrj.singleton.ZooLog;
 import com.msg.zooPrj.visitor.Visitor;
 
-//This is the class for the Composite Design Pattern (Leaf)
-
+/*
+ * This is the class for the Composite Design Pattern (Leaf)
+ * */
 public class Specimen implements Animal {
 	protected String name;
 	protected int age;
@@ -12,30 +14,29 @@ public class Specimen implements Animal {
 		super();
 		this.name = name;
 		this.age = age;
+		ZooLog.logger.trace("Specimen["+name+","+age+"] class created...");
 	}
 
 	@Override
 	public void add(Animal a) {
-		// TODO Auto-generated method stub
+		// Nothing should be added to a leaf
 	}
 
 	@Override
 	public String getName() {
-		// TODO Auto-generated method stub
 		return name;
 	}
 
 	public int getAge() {
-		// TODO Auto-generated method stub
 		return age;
 	}
 
 	@Override
 	public String getInfo() {
-		// TODO Auto-generated method stub
 		return name + " has age:" + age;
 	}
 
+	@Override
 	public String toString() {
 		return getInfo();
 	}

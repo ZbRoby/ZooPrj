@@ -2,8 +2,14 @@ package com.msg.zooPrj.visitor;
 
 import com.msg.zooPrj.composite.Specimen;
 import com.msg.zooPrj.composite.SpecimenGroupAL;
-import com.msg.zooPrj.composite.SpecimenGroupHT;
+import com.msg.zooPrj.composite.SpecimenGroupHM;
 import com.msg.zooPrj.singleton.ZooLog;
+
+/**
+ * @author marius
+ * Implementation of visitor interface
+ * Counts the number of each type of object
+ */
 
 public class StatsVisitor implements Visitor {
 
@@ -22,7 +28,7 @@ public class StatsVisitor implements Visitor {
 	}
 
 	@Override
-	public void visit(SpecimenGroupHT a) {
+	public void visit(SpecimenGroupHM a) {
 		coutClass++;
 
 	}
