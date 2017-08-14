@@ -2,7 +2,8 @@ package com.msg.zooPrj.singleton;
 
 import com.msg.zooPrj.composite.Animal;
 
-/*Singleton Design Pattern Enum variation    */
+/*@author daniel
+ * Singleton Design Pattern Enum variation    */
 
 public enum SingletonEnum {
 	INSTANCE;
@@ -16,7 +17,5 @@ public enum SingletonEnum {
 	public Animal getSpecime() {
 		return specimen;
 	}
-	public Animal getSpecime() {
-		return specime;
-	}
+
 }
