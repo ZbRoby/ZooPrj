@@ -1,4 +1,4 @@
-package jUnitTesting.visitor;
+package com.msg.zooPrj.visitor;
 
 import org.junit.Test;
 
