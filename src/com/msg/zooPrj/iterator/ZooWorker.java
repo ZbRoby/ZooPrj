@@ -24,15 +24,15 @@ public class ZooWorker {
 	}
 
 	public void show() {
-		Iterator iam = am.createIterator();
-		Iterator iar = ar.createIterator();
+		Iterator<?> iam = am.createIterator();
+		Iterator<?> iar = ar.createIterator();
 		System.out.println("Mammal:");
 		display(iam);
 		System.out.println("Reptile:");
 		display(iar);
 	}
 
-	public void display(Iterator iterator) {
+	public void display(Iterator<?> iterator) {
 		while (iterator.hasNext()) {
 			Animal animal = (Animal) iterator.next();
 			System.out.println("Animal is :" + animal);

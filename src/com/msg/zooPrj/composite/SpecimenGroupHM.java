@@ -57,7 +57,7 @@ public class SpecimenGroupHM implements Animal, AnimalIterator {
 	}
 
 	@Override
-	public Iterator createIterator() {
+	public Iterator<?> createIterator() {
 		return animals.values().iterator();
 	}
 }
