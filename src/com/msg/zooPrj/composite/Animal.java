@@ -5,14 +5,14 @@ import com.msg.zooPrj.visitor.Visitor;
 /*
 *
 *This is the interface for the Composite Design Pattern (component)
-*/
+ */
 public interface Animal {
 
-	public void add(Animal a);
+    void add(Animal a);
 
-	public String getName();
+    String getName();
 
-	public String getInfo();
+    String getInfo();
 
-	public void acceptVisitor(Visitor v);
+    void acceptVisitor(Visitor v);
 }

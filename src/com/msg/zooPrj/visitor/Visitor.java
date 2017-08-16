@@ -3,17 +3,15 @@ package com.msg.zooPrj.visitor;
 import com.msg.zooPrj.composite.*;
 
 /**
- * 
- * @author marius
- * Interface for visitor design pattern
+ *
+ * @author marius Interface for visitor design pattern
  */
-
 public interface Visitor {
 
-	public void visit(SpecimenGroupAL a);
+    void visit(SpecimenGroupAL a);
 
-	public void visit(SpecimenGroupHM a);
+    void visit(SpecimenGroupHM a);
 
-	public void visit(Specimen s);
+    void visit(Specimen s);
 
 }
