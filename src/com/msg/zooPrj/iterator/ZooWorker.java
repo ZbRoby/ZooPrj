@@ -20,7 +20,7 @@ public class ZooWorker {
 	public ZooWorker(AnimalIterator am, AnimalIterator ar) {
 		this.am = am;
 		this.ar = ar;
-		ZooLog.logger.trace("The zoo worker has been created!");
+		ZooLog.logger.info("The zoo worker has been created!");
 	}
 
 	public void show() {

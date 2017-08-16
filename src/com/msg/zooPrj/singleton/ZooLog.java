@@ -1,13 +1,13 @@
 package com.msg.zooPrj.singleton;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import java.util.logging.Logger;
+
 
 /*  singleton zoo loger that logs in all project   */
 public class ZooLog {
 
 	private static ZooLog ins = new ZooLog();
-	public static final Logger logger = LogManager.getLogger(ZooLog.class);
+	public static final Logger logger = Logger.getLogger("ZooLog");
 
 	private ZooLog() {
 	}

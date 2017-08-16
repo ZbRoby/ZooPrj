@@ -21,7 +21,7 @@ public class SaveVisitor implements Visitor {
 	private String text;
 
 	public SaveVisitor() {
-		ZooLog.logger.trace("Save visitor created...");
+		ZooLog.logger.info("Save visitor created...");
 	}
 
 	@Override
@@ -54,10 +54,10 @@ public class SaveVisitor implements Visitor {
 			writer.close();
 
 		} catch (FileNotFoundException e) {
-			ZooLog.logger.error("File not found exception.");
+			ZooLog.logger.severe("File not found exception.");
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
-			ZooLog.logger.error("Unsupported encoding exception.");
+			ZooLog.logger.severe("Unsupported encoding exception.");
 			e.printStackTrace();
 		}
 

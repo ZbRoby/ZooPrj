@@ -17,7 +17,7 @@ public class CommandStats implements Command {
 
 	public CommandStats(Animal a) {
 		this.a = a;
-		ZooLog.logger.trace("Stats command created...");
+		ZooLog.logger.info("Stats command created...");
 		v = new StatsVisitor();
 	}
 
@@ -26,13 +26,13 @@ public class CommandStats implements Command {
 
 		a.acceptVisitor(v);
 			
-		ZooLog.logger.trace("Count report:\n"+
+		ZooLog.logger.info("Count report:\n"+
 				"-----------------------------------------------------------------\n"
 				+ "|\tSpecimen:\t\t|\t" + v.getCoutSpecimen()+"\t\t\t|\n"
 				+ "|\tGroups:\t\t\t|\t" + v.getCoutClass()+"\t\t\t|\n"+
 				"-----------------------------------------------------------------");
 
-		ZooLog.logger.trace("Stats command executed...");
+		ZooLog.logger.info("Stats command executed...");
 	}
 
 }

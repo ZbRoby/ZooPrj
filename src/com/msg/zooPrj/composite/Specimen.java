@@ -14,7 +14,7 @@ public class Specimen implements Animal {
 		super();
 		this.name = name;
 		this.age = age;
-		ZooLog.logger.trace("Specimen["+name+","+age+"] class created...");
+		ZooLog.logger.info("Specimen["+name+","+age+"] class created...");
 	}
 
 	@Override

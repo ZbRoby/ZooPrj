@@ -20,13 +20,13 @@ public class SpecimenGroupAL implements Animal, AnimalIterator {
 		super();
 		this.name = name;
 		this.animals = new ArrayList<Animal>();
-		ZooLog.logger.trace("SpecimenGroupAL["+name+"] class created...");
+		ZooLog.logger.info("SpecimenGroupAL["+name+"] class created...");
 	}
 
 	@Override
 	public void add(Animal a) {
 		animals.add(a);
-		ZooLog.logger.trace("An Element has been added to SpecimenGroupAL["+name+"] ...");
+		ZooLog.logger.info("An Element has been added to SpecimenGroupAL["+name+"] ...");
 	}
 
 	@Override

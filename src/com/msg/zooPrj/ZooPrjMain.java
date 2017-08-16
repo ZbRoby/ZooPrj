@@ -11,12 +11,15 @@ import com.msg.zooPrj.composite.SpecimenGroupHM;
 import com.msg.zooPrj.iterator.AnimalIterator;
 import com.msg.zooPrj.iterator.ZooWorker;
 import com.msg.zooPrj.singleton.SingletonEnum;
+import com.msg.zooPrj.singleton.ZooLog;
+import java.util.logging.Level;
 
 public class ZooPrjMain {
 	public static void main(String[] args) {
-
+                ZooLog.logger.setLevel(Level.ALL);
 		Animal allLivingThings, mammal, reptile, shark, dog, cat, snake, lizard;
 		allLivingThings = new SpecimenGroupAL("Animalia");
+                
 
 		mammal = new SpecimenGroupAL("Mammal");
 		reptile = new SpecimenGroupHM("Reptile");

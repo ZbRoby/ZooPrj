@@ -18,7 +18,7 @@ public class StatsVisitor implements Visitor {
 	private int coutSpecimen = 0;
 
 	public StatsVisitor() {
-		ZooLog.logger.trace("Stats visitor created...");
+		ZooLog.logger.info("Stats visitor created...");
 	}
 
 	@Override

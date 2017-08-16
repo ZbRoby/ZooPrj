@@ -17,7 +17,7 @@ public class CommandSave implements Command {
 
 	public CommandSave(Animal a) {
 		this.a = a;
-		ZooLog.logger.trace("Save command created...");
+		ZooLog.logger.info("Save command created...");
 		v2 = new SaveVisitor();
 	}
 
@@ -25,7 +25,7 @@ public class CommandSave implements Command {
 	public void execute() {
 
 		v2.save(a, "test.txt");
-		ZooLog.logger.trace("Save command executed...");
+		ZooLog.logger.info("Save command executed...");
 	}
 
 }

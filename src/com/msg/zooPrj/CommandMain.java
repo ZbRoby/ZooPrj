@@ -22,7 +22,7 @@ public class CommandMain {
 		open.execute();
 
 		Animal all = SingletonEnum.INSTANCE.getSpecime();
-		ZooLog.logger.trace(all);
+		ZooLog.logger.info(all.toString());
 		
 		Command stats = new CommandStats(all);
 		stats.execute();

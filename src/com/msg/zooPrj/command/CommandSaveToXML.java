@@ -32,7 +32,7 @@ public class CommandSaveToXML implements Command{
 	
 	public CommandSaveToXML(String file) {
 		this.file = file;
-		ZooLog.logger.trace("SaveToXML command created...");
+		ZooLog.logger.info("SaveToXML command created...");
 	}
 
 	
@@ -48,14 +48,14 @@ public class CommandSaveToXML implements Command{
 			writer.close();
 
 		} catch (FileNotFoundException e) {
-			ZooLog.logger.error("File not found exception.");
+			ZooLog.logger.severe("File not found exception.");
 			e.printStackTrace();
 		} catch (UnsupportedEncodingException e) {
-			ZooLog.logger.error("Unsupported encoding exception.");
+			ZooLog.logger.severe("Unsupported encoding exception.");
 			e.printStackTrace();
 		}
 		
-		ZooLog.logger.trace("SaveToXML command executed...");
+		ZooLog.logger.info("SaveToXML command executed...");
 		
 	}
 	

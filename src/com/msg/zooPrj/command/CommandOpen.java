@@ -25,7 +25,7 @@ public class CommandOpen implements Command{
 	
 	public CommandOpen(String file) {
 		this.file = file;
-		ZooLog.logger.trace("Open command created...");
+		ZooLog.logger.info("Open command created...");
 	}
 
 	@Override
@@ -43,10 +43,10 @@ public class CommandOpen implements Command{
 		    }
 			
 		} catch (FileNotFoundException e) {
-			ZooLog.logger.error("File not found exception.");
+			ZooLog.logger.severe("File not found exception.");
 			e.printStackTrace();
 		} catch (IOException e) {
-			ZooLog.logger.error("IO exception.");
+			ZooLog.logger.severe("IO exception.");
 			e.printStackTrace();
 		}finally{
 	    
@@ -54,7 +54,7 @@ public class CommandOpen implements Command{
 			filereader.close();
 			breader.close();
 		} catch (IOException e) {
-			ZooLog.logger.error("IO exception.");
+			ZooLog.logger.severe("IO exception.");
 			e.printStackTrace();
 		}
 		}
@@ -68,7 +68,7 @@ public class CommandOpen implements Command{
 		
 		SingletonEnum.INSTANCE.setSpecime(all);
 		
-		ZooLog.logger.trace("Open command executed...");
+		ZooLog.logger.info("Open command executed...");
 	}
 
 }

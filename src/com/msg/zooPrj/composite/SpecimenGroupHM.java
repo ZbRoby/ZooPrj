@@ -23,14 +23,14 @@ public class SpecimenGroupHM implements Animal, AnimalIterator {
 		this.name = name;
 		this.animals = new HashMap<Integer, Animal>();
 		this.index = 0;
-		ZooLog.logger.trace("SpecimenGroupHM["+name+"] class created...");
+		ZooLog.logger.info("SpecimenGroupHM["+name+"] class created...");
 	}
 
 	@Override
 	public void add(Animal a) {
 		animals.put(index, a);
 		index++;
-		ZooLog.logger.trace("An Element has been added to SpecimenGroupHM["+name+"] ...");
+		ZooLog.logger.info("An Element has been added to SpecimenGroupHM["+name+"] ...");
 	}
 
 	@Override
